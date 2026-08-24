@@ -21,7 +21,7 @@ def classify(extension: str, mapping: dict[str, list[str]]) -> str:
     stores. If no category in ``mapping`` claims the extension, the
     :data:`OTHER_CATEGORY` fallback (``"other"``) is returned.
     """
-    normalized = extension.lower()
+    normalized = extension
     for category, extensions in mapping.items():
         lowered = {ext.lower() for ext in extensions}
         if normalized in lowered:
